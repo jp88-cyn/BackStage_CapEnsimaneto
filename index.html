@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V.E.S.S.E.L</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="name-input-container" id="nameInputContainer">
+        <p>WHO ARE YOU?</p> <!-- Frase que aparece perguntando quem voce é -->
+        <input type="text" id="userName" placeholder="ENTER YOUR VESSEL"> <!-- Frase enter your vessel que aparece dentro da caixa -->
+
+        <button onclick="startExperience()">PROCEED</button> <!-- Botão de Proceed -->  
+    </div>
+
+    <main class="hidden" id="mainContent">
+        <section>
+            <div class="caixa-principal" id="textContainer">
+                
+            </div>
+        </section>
+    </main>
+
+    <!-- Sons -->
+    <audio id="textSound" preload="auto">
+        <source src="sounds/snd_knight_rotatingslash_line.wav" type="audio/mpeg"> <!-- Som do Texto -->
+    </audio>
+    <audio id="typingSound" preload="auto">
+        <source src="sounds/typing.wav" type="audio/mpeg"> <!-- Som ao escrever na caixa de texto -->
+    </audio>
+    <audio id="backgroundMusic" loop preload="auto"> <!-- Musica de fundo que fica em loop -->
+        <source src="sounds/background_music.mp3" type="audio/mpeg">
+    </audio>
+    
+    
+ <script src="script.js"></script>
+</body>
+</html>
+<!-- 
+Coisas para Melhorar/Adicionar:
+-
+
+
+
+ -->

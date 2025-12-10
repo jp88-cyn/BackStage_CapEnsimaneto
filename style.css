@@ -1,0 +1,100 @@
+
+
+
+
+:root{
+    --fontpadrao--: 'vel'
+}
+
+
+@font-face { 
+            font-family: 'vel';  
+            src: url('fonts/RPGSystem.ttf') format('truetype'); /* Para mudar a Fonte é so colocar o Arquivo dela dentro da pasta fonts */
+        }
+
+        body {
+            background: url(images/VideoAnotherHim.gif) no-repeat; /* Imagem de Fundo do Site, No caso o gif que fica em loop */
+            background-size: cover;
+            color: rgb(255, 255, 255);  /* Cor que todos os textos ( p / paragrafo ) ficam  */
+            font-family: 'vel', sans-serif; /* Fonte */
+            font-size: larger; 
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 2s ease-in-out, background-image 1s ease-in-out;
+        }
+
+        body.fade-in {
+            opacity: 1;
+        }
+
+        
+
+        .name-input-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        input, button {
+            font-family: 'vel', sans-serif; /* Fonte do Botão */
+            font-size: large;
+            padding: 10px;
+            margin: 10px;
+            background: rgba(0, 0, 0, 0.5); /* Cor de Fundo do Botão */
+            color: white; /* Cor principal */
+            border: 1px solid white;
+        }
+
+        button:hover {
+            color: black; /* Cor que Fica quando passar o Mouse por Cima */
+            background: hsl(0, 0%, 100%); /* Cor de fundo quando passa o Mouse por cima */
+        }
+        /* Daqui pra Baixo nao tem muito oq Alterar */
+
+        button {
+            cursor: pointer;
+        }
+
+        .caixa-principal p {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 80%;
+        }
+
+        .caixa-principal {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(-50%, -50%) translate(0px, 0px); }
+            10% { transform: translate(-50%, -50%) translate(-2px, -2px); }
+            20% { transform: translate(-50%, -50%) translate(2px, -2px); }
+            30% { transform: translate(-50%, -50%) translate(-2px, 2px); }
+            40% { transform: translate(-50%, -50%) translate(2px, 2px); }
+            50% { transform: translate(-50%, -50%) translate(-2px, -2px); }
+            60% { transform: translate(-50%, -50%) translate(2px, -2px); }
+            70% { transform: translate(-50%, -50%) translate(-2px, 2px); }
+            80% { transform: translate(-50%, -50%) translate(2px, 2px); }
+            90% { transform: translate(-50%, -50%) translate(-2px, -2px); }
+            100% { transform: translate(-50%, -50%) translate(0px, 0px); }
+        }
+
+        .shake {
+            animation: shake 0.5s;
+        }
